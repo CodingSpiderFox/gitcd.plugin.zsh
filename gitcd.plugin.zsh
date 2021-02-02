@@ -7,6 +7,7 @@ gitcd() {
 
     # 用户传入的参数
     url=$1
+    url=$(echo $url | awk '{print tolower($0)}')
 
     # 忘记输入参数，就跳出
     [[ $url == "" ]] && {
